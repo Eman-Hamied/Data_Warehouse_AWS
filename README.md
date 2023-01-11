@@ -26,7 +26,7 @@ Here is the database star schema for Song Play Analysis project
 
 This design will offer flexibility with the queries being used for analysis.
 
-##Project Datasets
+## Project Datasets
 We'll be working with two datasets that reside in S3. Here are the S3 links for each:
 
 - Song data: ```s3://udacity-dend/song_data```
@@ -74,21 +74,18 @@ log_data/2018/11/2018-11-13-events.json
 
 ## Files Description
 
-## test.ipynb
-displays the first few rows of each table to let you check the database.
-
 ## create_tables.py
 
-Drops and creates database tables. Run this file to reset tables before each time before running  ETL scripts.
-
-## etl.ipynb
-
-Reads and processes a single file from song_data and log_data and loads the data into your tables. This notebook contains detailed instructions on the ETL process for each of the tables.
+Is where we'll create our fact and dimension tables for the star schema in Redshift.
 
 ## etl.py
 
-Reads and processes files from song_data and log_data and loads them into database tables. it's the same processes as the ETL notebook.
+Is where we'll load data from S3 into staging tables on Redshift and then process that data into our analytics tables on Redshift.
 
 ## sql_queries.py
 
-Contains all sql queries, and is imported into the last three files above.
+Contains all sql queries, and is imported into the last two files above.
+
+## dwh.cfg
+
+Contains the needed configurations for AWS.
